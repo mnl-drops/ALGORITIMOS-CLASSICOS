@@ -1,0 +1,24 @@
+{
+  "info": {
+    "name": "Algoritmos Clássicos",
+    "description": "Testa as quatro operações aritméticas da atividade e os seis algoritmos do site. Altere linguagem para javascript ou java nos testes dos algoritmos.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3001" },
+    { "key": "linguagem", "value": "javascript" }
+  ],
+  "item": [
+    { "name": "01 - Número primo", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"n\": 29,\n  \"linguagem\": \"{{linguagem}}\"\n}", "options": { "raw": { "language": "json" } } }, "url": "{{baseUrl}}/api/primo" } },
+    { "name": "02 - Somatório", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"valores\": [12, 8, -3],\n  \"linguagem\": \"{{linguagem}}\"\n}", "options": { "raw": { "language": "json" } } }, "url": "{{baseUrl}}/api/somatorio" } },
+    { "name": "03 - Fibonacci", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"n\": 8,\n  \"linguagem\": \"{{linguagem}}\"\n}", "options": { "raw": { "language": "json" } } }, "url": "{{baseUrl}}/api/fibonacci" } },
+    { "name": "04 - MDC de Euclides", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"a\": 84,\n  \"b\": 30,\n  \"linguagem\": \"{{linguagem}}\"\n}", "options": { "raw": { "language": "json" } } }, "url": "{{baseUrl}}/api/mdc" } },
+    { "name": "05 - Quicksort", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"valores\": [9, 2, 7, 1],\n  \"linguagem\": \"{{linguagem}}\"\n}", "options": { "raw": { "language": "json" } } }, "url": "{{baseUrl}}/api/quicksort" } },
+    { "name": "06 - Contagem por intervalo", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"valores\": [2, 4, 1, 5, 3],\n  \"linguagem\": \"{{linguagem}}\"\n}", "options": { "raw": { "language": "json" } } }, "url": "{{baseUrl}}/api/contagem" } },
+    { "name": "07 - Soma (atividade POST)", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"a\": 12,\n  \"b\": 8\n}", "options": { "raw": { "language": "json" } } }, "url": "{{baseUrl}}/soma" } },
+    { "name": "08 - Subtração (atividade POST)", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"a\": 12,\n  \"b\": 8\n}", "options": { "raw": { "language": "json" } } }, "url": "{{baseUrl}}/subtracao" } },
+    { "name": "09 - Multiplicação (atividade POST)", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"a\": 12,\n  \"b\": 8\n}", "options": { "raw": { "language": "json" } } }, "url": "{{baseUrl}}/multiplicacao" } },
+    { "name": "10 - Divisão (atividade POST)", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"a\": 12,\n  \"b\": 8\n}", "options": { "raw": { "language": "json" } } }, "url": "{{baseUrl}}/divisao" } },
+    { "name": "Estado do servidor", "request": { "method": "GET", "url": "{{baseUrl}}/api/health" } }
+  ]
+}

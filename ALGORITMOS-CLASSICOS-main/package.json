@@ -1,0 +1,10 @@
+{
+  "name": "algoritmos-classicos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Laboratório web de algoritmos clássicos com API REST POST",
+  "main": "app.js",
+  "scripts": { "start": "node app.js", "dev": "node --watch app.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "express": "^5.2.1" }
+}

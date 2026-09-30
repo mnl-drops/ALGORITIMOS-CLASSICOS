@@ -1,0 +1,154 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Algoritmos Clássicos — laboratório</title><style>@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{font-family:'DM Sans',sans-serif;color:#202b28;background:#f6f6f1;font-synthesis:none;text-rendering:optimizeLegibility}*{box-sizing:border-box}body{margin:0}header{height:68px;border-bottom:1px solid #e6e8df;background:#fbfbf8;display:flex;align-items:center;padding:0 max(calc((100% - 1050px)/2),6vw)}.logo{font:800 18px Manrope,sans-serif;color:#24342a;text-decoration:none;letter-spacing:-.6px}.logo span{color:#8bab61}.hero,.work,footer{width:min(100% - 40px,980px);margin:auto}.hero{padding:58px 0 34px;display:flex;align-items:center;justify-content:space-between}.hero label{font:500 9px 'DM Mono',monospace;letter-spacing:1.2px;color:#819663}.hero h1{font:700 clamp(44px,7vw,62px)/1.06 Manrope,sans-serif;letter-spacing:-3.5px;margin:17px 0 12px}.hero h1 em{font-weight:500;color:#799751}.hero p{max-width:450px;color:#7d8379;font-size:13px;line-height:1.7;margin:0}.graphic{position:relative;width:150px;height:130px;margin-right:75px;display:grid;place-items:center}.graphic:before,.graphic:after{content:'';position:absolute;inset:4px;border:1px solid #dce5cf;border-radius:50%;transform:rotate(-30deg)}.graphic:after{inset:18px -10px;transform:rotate(37deg);border-color:#e3e6dc}.graphic>b{z-index:1;background:#273d2d;color:#deefc9;border-radius:17px;padding:20px 23px;font:20px 'DM Mono',monospace;box-shadow:0 10px 25px #202b281c}.graphic i{position:absolute;z-index:2;padding:7px;background:#fff;border:1px solid #e8ece0;border-radius:8px;color:#738f4c;font:10px 'DM Mono',monospace;font-style:normal}.graphic i:nth-child(2){top:3px;left:22px}.graphic i:nth-child(3){right:3px;top:41px}.graphic i:nth-child(4){bottom:3px;left:5px}.work{display:grid;grid-template-columns:235px 1fr;background:#fff;border:1px solid #e6e8e1;border-radius:13px;overflow:hidden;box-shadow:0 13px 40px #283a1c0a;min-height:390px}.work nav{padding:23px 15px;background:#fafbf8;border-right:1px solid #e8eae3;display:flex;flex-direction:column}.work nav>small{padding:0 8px 13px;color:#999f92;font:9px 'DM Mono',monospace;letter-spacing:1px}.work nav>small span{float:right}.item{border:0;background:none;color:#6f786d;display:flex;align-items:center;gap:10px;padding:9px 8px;border-radius:8px;text-align:left;cursor:pointer;font:500 12px 'DM Sans',sans-serif}.item:hover{background:#f3f5ef}.item.active{background:#edf3e5;color:#456336}.ico{width:26px;height:26px;display:grid;place-items:center;background:white;border:1px solid #eceee8;border-radius:7px;color:#748f51;font:12px 'DM Mono',monospace}.item.active .ico{background:#deebca;border-color:#deebca}.item small{margin-left:auto;color:#a4aa9e;font:9px 'DM Mono',monospace}.work article{padding:29px 34px 31px}.title{display:flex;align-items:center;gap:12px}.symbol{width:43px;height:43px;border-radius:12px;background:#eff5e7;color:#668645;display:grid;place-items:center;font:20px 'DM Mono',monospace}.title label,.answer label{color:#979e90;font:9px 'DM Mono',monospace;letter-spacing:1px}.title h2{font:700 22px Manrope,sans-serif;letter-spacing:-.6px;margin:3px 0}.desc{margin:12px 0 19px;color:#798075;font-size:12px;line-height:1.7}.model-choice{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:7px 12px;padding:11px 12px;background:#fafbf8;border:1px solid #ecefe7;border-radius:8px}.model-choice>span{color:#737a70;font:500 9px 'DM Mono',monospace;letter-spacing:.5px}.model-options{display:flex;gap:7px}.model-option{border:1px solid #e5e8df;background:white;border-radius:6px;padding:7px 11px;color:#71796d;font:500 11px 'DM Sans',sans-serif;cursor:pointer}.model-option:hover{border-color:#bed19f}.model-option.active{background:#edf3e5;border-color:#d7e5c5;color:#456336}.model-choice>small{grid-column:2;color:#939a8d;font-size:10px}.field{display:block;margin-top:12px;color:#737a70;font:500 9px 'DM Mono',monospace;letter-spacing:.5px}.field input{width:100%;height:43px;margin-top:7px;padding:0 12px;border:1px solid #e5e8df;border-radius:7px;background:#fdfdfa;font:13px 'DM Sans',sans-serif;outline:none}.field input:focus{border-color:#aac887;box-shadow:0 0 0 3px #eff5e8}.submit{width:100%;height:43px;margin-top:17px;padding:0 14px;display:flex;align-items:center;justify-content:space-between;border:0;border-radius:7px;background:#283d2d;color:white;font:600 12px 'DM Sans',sans-serif;cursor:pointer}.submit:hover{background:#405e39}.submit b{color:#d5eab6;font-size:16px}.submit:disabled{opacity:.6;cursor:wait}.answer{margin-top:14px;padding:12px 14px;background:#fafbf8;border:1px solid #ecefe7;border-radius:8px}.answer label{font-size:8px}.answer p{margin:7px 0 0;color:#4e693d;font-size:12px;line-height:1.5;overflow-wrap:anywhere}.answer.error{background:#fff8f6;border-color:#f1dfda}.answer.error p{color:#a64b40}.lesson{margin-top:23px;padding-top:18px;border-top:1px solid #eceee7}.lesson-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}.lesson h3{margin:0;color:#27352b;font:700 15px Manrope,sans-serif}.lesson-heading span{max-width:52%;padding:6px 8px;border-radius:5px;background:#f2f4ed;color:#77866b;font:9px 'DM Mono',monospace;text-align:right}.lesson>p,.example p{margin:9px 0 0;color:#747b71;font-size:11px;line-height:1.75}.example{margin-top:13px;padding:11px 13px;background:#fafbf8;border-left:2px solid #a4bd7c;border-radius:0 7px 7px 0}.example b{color:#697e4e;font:500 9px 'DM Mono',monospace;letter-spacing:.7px}.example p{margin-top:5px}footer{border-top:1px solid #e6e8df;padding:17px 0 24px;display:flex;justify-content:space-between;color:#92998e;font-size:9px}
+@media(max-width:650px){header{height:60px;padding:0 18px}.hero,.work,footer{width:calc(100% - 28px)}.hero{padding:42px 0 28px}.graphic{transform:scale(.7);transform-origin:right center;width:110px;margin-right:-15px}.hero h1{font-size:46px;letter-spacing:-2.6px}.hero p{font-size:12px}.work{grid-template-columns:1fr}.work nav{border-right:0;border-bottom:1px solid #e8eae3;padding:14px 12px}.work nav>div{display:grid;grid-template-columns:repeat(2,1fr)}.work article{padding:22px 19px}.lesson-heading{flex-direction:column;gap:8px}.lesson-heading span{max-width:none;text-align:left}footer{flex-direction:column;gap:8px}}
+</style></head><body>
+<header><a class="logo" href="/">{ } algoritmos<span>.</span></a></header>
+<main><section class="hero"><div><label>ALGORITMOS FUNDAMENTAIS</label><h1>Ideias clássicas.<br><em>Na prática.</em></h1><p>Escolha uma função, experimente seus próprios valores e entenda como cada algoritmo chega ao resultado.</p></div><div class="graphic" aria-hidden="true"><b>A</b><i>01</i><i>Σ</i><i>ƒ</i></div></section>
+<section class="work"><nav><small>ESCOLHA UMA FUNÇÃO <span>06</span></small><div id="nav"></div></nav><article><div id="tool"></div></article></section></main><footer>Algoritmos Clássicos <span>Aprenda testando</span></footer><script>const tools = [
+  {
+    id: 'primo', name: 'Número primo', icon: '↗', fields: ['n'],
+    summary: 'Verifica se um número inteiro maior que zero só pode ser dividido exatamente por 1 e por ele mesmo.',
+    how: 'O algoritmo elimina os casos menores que 2 e testa possíveis divisores a partir de 2. Basta ir até a raiz quadrada do número: se ele tivesse um divisor maior, o par correspondente seria menor que a raiz e já teria sido encontrado.',
+    example: 'Para 29, nenhum número entre 2 e 5 divide 29 exatamente. Portanto, 29 é primo. Já 21 é divisível por 3 e não é primo.',
+    cost: 'O(√n) no tempo e O(1) de memória.'
+  },
+  {
+    id: 'somatorio', name: 'Somatório', icon: 'Σ', fields: ['valores'],
+    summary: 'Soma todos os números inteiros informados na lista.',
+    how: 'Começa com um acumulador igual a zero. Em seguida, percorre a lista uma única vez e adiciona cada valor ao acumulador. O valor final é a soma.',
+    example: 'Com [12, 8, -3], o cálculo é 0 + 12 + 8 − 3, resultando em 17. Valores negativos também são aceitos.',
+    cost: 'O(n) no tempo e O(1) de memória adicional.'
+  },
+  {
+    id: 'fibonacci', name: 'Fibonacci', icon: 'ƒ', fields: ['n'],
+    summary: 'Gera a quantidade escolhida de termos da sequência de Fibonacci, começando em 0 e 1.',
+    how: 'Cada termo depois dos dois primeiros é obtido somando os dois termos anteriores. A implementação guarda os termos em ordem e repete essa soma até completar a quantidade pedida.',
+    example: 'Para 8 termos, o resultado é 0, 1, 1, 2, 3, 5, 8, 13. Informe de 2 a 78 para manter os valores inteiros exatos.',
+    cost: 'O(n) no tempo e O(n) de memória para guardar a sequência.'
+  },
+  {
+    id: 'mdc', name: 'MDC de Euclides', icon: '÷', fields: ['a', 'b'],
+    summary: 'Encontra o maior inteiro que divide os dois números sem deixar resto.',
+    how: 'O método de Euclides substitui o par de números por “o menor número e o resto da divisão”. Repete até o resto ser zero; o último divisor diferente de zero é o MDC. O algoritmo também considera o valor absoluto dos números.',
+    example: 'Para 84 e 30: 84 ÷ 30 deixa resto 24; 30 ÷ 24 deixa resto 6; 24 ÷ 6 deixa resto 0. Logo, o MDC é 6.',
+    cost: 'O(log(min(a,b))) no tempo e O(1) de memória.'
+  },
+  {
+    id: 'quicksort', name: 'Quicksort', icon: '↕', fields: ['valores'],
+    summary: 'Organiza os inteiros do menor para o maior usando o algoritmo de ordenação Quicksort.',
+    how: 'Escolhe um elemento como pivô e separa os valores em dois grupos: os menores ou iguais ao pivô e os maiores. Depois aplica a mesma ideia a cada grupo até que todos estejam ordenados.',
+    example: 'A lista [9, 2, 7, 1] fica [1, 2, 7, 9]. A lista original não é alterada durante o cálculo.',
+    cost: 'Em média, O(n log n); no pior caso, O(n²).'
+  },
+  {
+    id: 'contagem', name: 'Contagem por intervalo', icon: '#', fields: ['valores'],
+    summary: 'Conta quantos itens da lista estão entre o primeiro valor informado e a quantidade de itens (N), incluindo os limites.',
+    how: 'O primeiro número da lista e N definem o intervalo. Se o primeiro número for maior que N, os limites são invertidos. Depois, cada elemento é testado e os que estão dentro do intervalo são contados.',
+    example: 'Em [2, 4, 1, 5, 3], N = 5 e o intervalo é de 2 a 5. Quatro valores (2, 4, 5 e 3) estão nesse intervalo.',
+    cost: 'O(n) no tempo e O(1) de memória adicional.'
+  }
+];
+
+let selected = 0;
+let selectedLanguage = 'javascript';
+const nav = document.querySelector('#nav');
+const tool = document.querySelector('#tool');
+
+function render() {
+  const item = tools[selected];
+  nav.replaceChildren(...tools.map((entry, index) => {
+    const button = document.createElement('button');
+    button.className = `item${index === selected ? ' active' : ''}`;
+    button.type = 'button';
+    button.setAttribute('aria-pressed', String(index === selected));
+    button.innerHTML = `<span class="ico">${entry.icon}</span><span>${entry.name}</span><small>0${index + 1}</small>`;
+    button.addEventListener('click', () => { selected = index; render(); });
+    return button;
+  }));
+
+  const fields = item.fields.map((name, index) => {
+    const label = name === 'valores' ? 'Números inteiros (separe por vírgula)' :
+      name === 'n' ? (item.id === 'fibonacci' ? 'Quantidade de termos (2 a 78)' : 'Número inteiro positivo') :
+      index === 0 ? 'Primeiro número' : 'Segundo número';
+    const placeholder = name === 'valores' ? 'Ex.: 9, 2, 7, 1' :
+      name === 'n' ? (item.id === 'fibonacci' ? 'Ex.: 8' : 'Ex.: 29') :
+      index === 0 ? 'Ex.: 84' : 'Ex.: 30';
+    return `<label class="field">${label}<input name="${name}" ${name === 'valores' ? 'type="text" inputmode="text"' : 'type="number" step="1"'} placeholder="${placeholder}" required autocomplete="off"></label>`;
+  }).join('');
+
+  tool.innerHTML = `<div class="title"><div class="symbol">${item.icon}</div><div><label>FUNÇÃO ${String(selected + 1).padStart(2, '0')}</label><h2>${item.name}</h2></div></div>
+    <p class="desc">${item.summary}</p>
+    <div class="model-choice"><span>Executar usando</span><div class="model-options" role="group" aria-label="Escolha a linguagem"><button type="button" class="model-option ${selectedLanguage === 'javascript' ? 'active' : ''}" data-language="javascript" aria-pressed="${selectedLanguage === 'javascript'}">JavaScript</button><button type="button" class="model-option ${selectedLanguage === 'java' ? 'active' : ''}" data-language="java" aria-pressed="${selectedLanguage === 'java'}">Java</button></div><small id="model-hint"></small></div>
+    <form id="form">${fields}<button class="submit" type="submit">Calcular <b>↗</b></button></form>
+    <div class="answer" id="answer"><label id="answer-label">RESULTADO</label><p id="answer-text">Informe os valores para ver o resultado.</p></div>
+    <section class="lesson"><div class="lesson-heading"><h3>Como funciona</h3><span>${item.cost}</span></div><p>${item.how}</p><div class="example"><b>Exemplo</b><p>${item.example}</p></div></section>`;
+  document.querySelector('#form').addEventListener('submit', run);
+  document.querySelector('#model-hint').textContent = selectedLanguage === 'java'
+    ? 'Java selecionado. É necessário ter o JDK instalado.'
+    : 'JavaScript selecionado. Executado pelo Node.js.';
+  document.querySelectorAll('.model-option').forEach((button) => button.addEventListener('click', () => {
+    selectedLanguage = button.dataset.language;
+    document.querySelectorAll('.model-option').forEach((option) => {
+      const active = option.dataset.language === selectedLanguage;
+      option.classList.toggle('active', active);
+      option.setAttribute('aria-pressed', String(active));
+    });
+    document.querySelector('#model-hint').textContent = selectedLanguage === 'java'
+      ? 'Java selecionado. É necessário ter o JDK instalado.'
+      : 'JavaScript selecionado. Executado pelo Node.js.';
+  }));
+}
+
+function makePayload(form, fields) {
+  const data = new FormData(form);
+  const payload = {};
+  for (const field of fields) {
+    if (field === 'valores') {
+      const parts = data.get(field).split(',').map((part) => part.trim());
+      if (!parts.length || parts.some((part) => !part)) throw Error('Separe os números por vírgulas e preencha todos os valores.');
+      payload[field] = parts.map(Number);
+      if (payload[field].some((value) => !Number.isSafeInteger(value))) throw Error('Use apenas números inteiros válidos.');
+    } else {
+      payload[field] = Number(data.get(field));
+      if (!Number.isSafeInteger(payload[field])) throw Error('Informe um número inteiro válido.');
+    }
+  }
+  payload.linguagem = selectedLanguage;
+  return payload;
+}
+
+async function run(event) {
+  event.preventDefault();
+  const item = tools[selected];
+  const button = event.currentTarget.querySelector('button');
+  const answer = document.querySelector('#answer');
+  const text = document.querySelector('#answer-text');
+  const answerLabel = document.querySelector('#answer-label');
+  try {
+    const body = makePayload(event.currentTarget, item.fields);
+    button.disabled = true;
+    text.textContent = 'Calculando…';
+    answer.classList.remove('error');
+    const response = await fetch(`/api/${item.id}`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body)
+    });
+    const data = await response.json();
+    if (!response.ok) throw Error(data.erro || 'Não foi possível concluir o cálculo.');
+    answerLabel.textContent = `RESULTADO · ${data.linguagem.toUpperCase()}`;
+    const result = Array.isArray(data.resultado) ? data.resultado.join(', ') :
+      typeof data.resultado === 'boolean' ? (data.resultado ? 'É um número primo.' : 'Não é um número primo.') :
+      new Intl.NumberFormat('pt-BR').format(data.resultado);
+    text.textContent = data.intervalo ? `${result} · intervalo considerado: ${data.intervalo.join(' a ')}.` : result;
+  } catch (error) {
+    answer.classList.add('error');
+    answerLabel.textContent = 'NÃO FOI POSSÍVEL CALCULAR';
+    text.textContent = error.message;
+  } finally {
+    button.disabled = false;
+  }
+}
+
+render();
+</script></body></html>
+
+
